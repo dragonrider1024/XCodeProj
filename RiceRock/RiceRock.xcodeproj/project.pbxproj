@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6861F1B71AC0EAC200537473 /* missile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6861F1B61AC0EAC200537473 /* missile.mp3 */; };
+		6861F1BD1AC23E8500537473 /* ImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6861F1BC1AC23E8500537473 /* ImageInfo.m */; };
+		6861F1C01AC243C900537473 /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 6861F1BF1AC243C900537473 /* Ship.m */; };
+		6861F1C31AC24ABA00537473 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6861F1C21AC24ABA00537473 /* Sprite.m */; };
+		68B269E71ABBB6AF00952C49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B269E61ABBB6AF00952C49 /* main.m */; };
+		68B269EA1ABBB6AF00952C49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B269E91ABBB6AF00952C49 /* AppDelegate.m */; };
+		68B269ED1ABBB6AF00952C49 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B269EC1ABBB6AF00952C49 /* GameScene.m */; };
+		68B269EF1ABBB6AF00952C49 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 68B269EE1ABBB6AF00952C49 /* GameScene.sks */; };
+		68B269F21ABBB6AF00952C49 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B269F11ABBB6AF00952C49 /* GameViewController.m */; };
+		68B269F51ABBB6AF00952C49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B269F31ABBB6AF00952C49 /* Main.storyboard */; };
+		68B269F71ABBB6AF00952C49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B269F61ABBB6AF00952C49 /* Images.xcassets */; };
+		68B269FA1ABBB6AF00952C49 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B269F81ABBB6AF00952C49 /* LaunchScreen.xib */; };
+		68B26A061ABBB6AF00952C49 /* RiceRockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B26A051ABBB6AF00952C49 /* RiceRockTests.m */; };
+		68B26A101ABBB6C800952C49 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B26A0F1ABBB6C800952C49 /* AVFoundation.framework */; };
+		68B26A121ABBB98300952C49 /* soundtrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68B26A111ABBB98300952C49 /* soundtrack.mp3 */; };
+		68B26A141ABCD1AC00952C49 /* thrust.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68B26A131ABCD1AC00952C49 /* thrust.mp3 */; };
+		68DBEECF1AC3C143005E5A40 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68DBEECE1AC3C143005E5A40 /* explosion.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68B26A001ABBB6AF00952C49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68B269D91ABBB6AF00952C49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68B269E01ABBB6AF00952C49;
+			remoteInfo = RiceRock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6861F1B61AC0EAC200537473 /* missile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = missile.mp3; path = ../../../../../Downloads/missile.mp3; sourceTree = "<group>"; };
+		6861F1BB1AC23E8500537473 /* ImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageInfo.h; sourceTree = "<group>"; };
+		6861F1BC1AC23E8500537473 /* ImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageInfo.m; sourceTree = "<group>"; };
+		6861F1BE1AC243C900537473 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
+		6861F1BF1AC243C900537473 /* Ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
+		6861F1C11AC24ABA00537473 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		6861F1C21AC24ABA00537473 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sprite.m; sourceTree = "<group>"; };
+		68B269E11ABBB6AF00952C49 /* RiceRock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiceRock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B269E51ABBB6AF00952C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B269E61ABBB6AF00952C49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		68B269E81ABBB6AF00952C49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		68B269E91ABBB6AF00952C49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		68B269EB1ABBB6AF00952C49 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		68B269EC1ABBB6AF00952C49 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		68B269EE1ABBB6AF00952C49 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		68B269F01ABBB6AF00952C49 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		68B269F11ABBB6AF00952C49 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		68B269F41ABBB6AF00952C49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68B269F61ABBB6AF00952C49 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		68B269F91ABBB6AF00952C49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		68B269FF1ABBB6AF00952C49 /* RiceRockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiceRockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B26A041ABBB6AF00952C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B26A051ABBB6AF00952C49 /* RiceRockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiceRockTests.m; sourceTree = "<group>"; };
+		68B26A0F1ABBB6C800952C49 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		68B26A111ABBB98300952C49 /* soundtrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = soundtrack.mp3; path = ../../../../../Downloads/soundtrack.mp3; sourceTree = "<group>"; };
+		68B26A131ABCD1AC00952C49 /* thrust.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = thrust.mp3; path = ../../../../../Downloads/thrust.mp3; sourceTree = "<group>"; };
+		68DBEECE1AC3C143005E5A40 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = explosion.mp3; path = ../../../../../Downloads/explosion.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68B269DE1ABBB6AF00952C49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B26A101ABBB6C800952C49 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B269FC1ABBB6AF00952C49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68B269D81ABBB6AF00952C49 = {
+			isa = PBXGroup;
+			children = (
+				68B26A0F1ABBB6C800952C49 /* AVFoundation.framework */,
+				68B269E31ABBB6AF00952C49 /* RiceRock */,
+				68B26A021ABBB6AF00952C49 /* RiceRockTests */,
+				68B269E21ABBB6AF00952C49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68B269E21ABBB6AF00952C49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68B269E11ABBB6AF00952C49 /* RiceRock.app */,
+				68B269FF1ABBB6AF00952C49 /* RiceRockTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68B269E31ABBB6AF00952C49 /* RiceRock */ = {
+			isa = PBXGroup;
+			children = (
+				68B269E81ABBB6AF00952C49 /* AppDelegate.h */,
+				68B269E91ABBB6AF00952C49 /* AppDelegate.m */,
+				68B269EB1ABBB6AF00952C49 /* GameScene.h */,
+				68B269EC1ABBB6AF00952C49 /* GameScene.m */,
+				6861F1BB1AC23E8500537473 /* ImageInfo.h */,
+				6861F1BC1AC23E8500537473 /* ImageInfo.m */,
+				6861F1BE1AC243C900537473 /* Ship.h */,
+				6861F1BF1AC243C900537473 /* Ship.m */,
+				6861F1C11AC24ABA00537473 /* Sprite.h */,
+				6861F1C21AC24ABA00537473 /* Sprite.m */,
+				68B269EE1ABBB6AF00952C49 /* GameScene.sks */,
+				68B269F01ABBB6AF00952C49 /* GameViewController.h */,
+				68B269F11ABBB6AF00952C49 /* GameViewController.m */,
+				68B269F31ABBB6AF00952C49 /* Main.storyboard */,
+				68B269F61ABBB6AF00952C49 /* Images.xcassets */,
+				68B269F81ABBB6AF00952C49 /* LaunchScreen.xib */,
+				68B269E41ABBB6AF00952C49 /* Supporting Files */,
+			);
+			path = RiceRock;
+			sourceTree = "<group>";
+		};
+		68B269E41ABBB6AF00952C49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6861F1B61AC0EAC200537473 /* missile.mp3 */,
+				68DBEECE1AC3C143005E5A40 /* explosion.mp3 */,
+				68B26A111ABBB98300952C49 /* soundtrack.mp3 */,
+				68B26A131ABCD1AC00952C49 /* thrust.mp3 */,
+				68B269E51ABBB6AF00952C49 /* Info.plist */,
+				68B269E61ABBB6AF00952C49 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68B26A021ABBB6AF00952C49 /* RiceRockTests */ = {
+			isa = PBXGroup;
+			children = (
+				68B26A051ABBB6AF00952C49 /* RiceRockTests.m */,
+				68B26A031ABBB6AF00952C49 /* Supporting Files */,
+			);
+			path = RiceRockTests;
+			sourceTree = "<group>";
+		};
+		68B26A031ABBB6AF00952C49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68B26A041ABBB6AF00952C49 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68B269E01ABBB6AF00952C49 /* RiceRock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68B26A091ABBB6AF00952C49 /* Build configuration list for PBXNativeTarget "RiceRock" */;
+			buildPhases = (
+				68B269DD1ABBB6AF00952C49 /* Sources */,
+				68B269DE1ABBB6AF00952C49 /* Frameworks */,
+				68B269DF1ABBB6AF00952C49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RiceRock;
+			productName = RiceRock;
+			productReference = 68B269E11ABBB6AF00952C49 /* RiceRock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		68B269FE1ABBB6AF00952C49 /* RiceRockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68B26A0C1ABBB6AF00952C49 /* Build configuration list for PBXNativeTarget "RiceRockTests" */;
+			buildPhases = (
+				68B269FB1ABBB6AF00952C49 /* Sources */,
+				68B269FC1ABBB6AF00952C49 /* Frameworks */,
+				68B269FD1ABBB6AF00952C49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68B26A011ABBB6AF00952C49 /* PBXTargetDependency */,
+			);
+			name = RiceRockTests;
+			productName = RiceRockTests;
+			productReference = 68B269FF1ABBB6AF00952C49 /* RiceRockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68B269D91ABBB6AF00952C49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Aerodyne Research, Inc";
+				TargetAttributes = {
+					68B269E01ABBB6AF00952C49 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					68B269FE1ABBB6AF00952C49 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 68B269E01ABBB6AF00952C49;
+					};
+				};
+			};
+			buildConfigurationList = 68B269DC1ABBB6AF00952C49 /* Build configuration list for PBXProject "RiceRock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68B269D81ABBB6AF00952C49;
+			productRefGroup = 68B269E21ABBB6AF00952C49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68B269E01ABBB6AF00952C49 /* RiceRock */,
+				68B269FE1ABBB6AF00952C49 /* RiceRockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68B269DF1ABBB6AF00952C49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B26A141ABCD1AC00952C49 /* thrust.mp3 in Resources */,
+				68B269FA1ABBB6AF00952C49 /* LaunchScreen.xib in Resources */,
+				68B269F71ABBB6AF00952C49 /* Images.xcassets in Resources */,
+				6861F1B71AC0EAC200537473 /* missile.mp3 in Resources */,
+				68DBEECF1AC3C143005E5A40 /* explosion.mp3 in Resources */,
+				68B269EF1ABBB6AF00952C49 /* GameScene.sks in Resources */,
+				68B269F51ABBB6AF00952C49 /* Main.storyboard in Resources */,
+				68B26A121ABBB98300952C49 /* soundtrack.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B269FD1ABBB6AF00952C49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68B269DD1ABBB6AF00952C49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B269F21ABBB6AF00952C49 /* GameViewController.m in Sources */,
+				68B269EA1ABBB6AF00952C49 /* AppDelegate.m in Sources */,
+				6861F1BD1AC23E8500537473 /* ImageInfo.m in Sources */,
+				6861F1C01AC243C900537473 /* Ship.m in Sources */,
+				68B269ED1ABBB6AF00952C49 /* GameScene.m in Sources */,
+				6861F1C31AC24ABA00537473 /* Sprite.m in Sources */,
+				68B269E71ABBB6AF00952C49 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B269FB1ABBB6AF00952C49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B26A061ABBB6AF00952C49 /* RiceRockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68B26A011ABBB6AF00952C49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68B269E01ABBB6AF00952C49 /* RiceRock */;
+			targetProxy = 68B26A001ABBB6AF00952C49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		68B269F31ABBB6AF00952C49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68B269F41ABBB6AF00952C49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		68B269F81ABBB6AF00952C49 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68B269F91ABBB6AF00952C49 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68B26A071ABBB6AF00952C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68B26A081ABBB6AF00952C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68B26A0A1ABBB6AF00952C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RiceRock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		68B26A0B1ABBB6AF00952C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RiceRock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		68B26A0D1ABBB6AF00952C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RiceRockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiceRock.app/RiceRock";
+			};
+			name = Debug;
+		};
+		68B26A0E1ABBB6AF00952C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RiceRockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiceRock.app/RiceRock";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68B269DC1ABBB6AF00952C49 /* Build configuration list for PBXProject "RiceRock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B26A071ABBB6AF00952C49 /* Debug */,
+				68B26A081ABBB6AF00952C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68B26A091ABBB6AF00952C49 /* Build configuration list for PBXNativeTarget "RiceRock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B26A0A1ABBB6AF00952C49 /* Debug */,
+				68B26A0B1ABBB6AF00952C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68B26A0C1ABBB6AF00952C49 /* Build configuration list for PBXNativeTarget "RiceRockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B26A0D1ABBB6AF00952C49 /* Debug */,
+				68B26A0E1ABBB6AF00952C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68B269D91ABBB6AF00952C49 /* Project object */;
+}
