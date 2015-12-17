@@ -62,18 +62,18 @@ extern NSMutableSet* bulletgroup;
     yposition += self.vel.dy;
     int x = (int) xposition;
     int y = (int) yposition;
-    int w = (int) self.scene.size.width;
-    int h = (int) self.scene.size.height;
+    int w = (int) self.scene.frame.size.width;
+    int h = (int) self.scene.frame.size.height;
     xposition = (double) (x % w);
     yposition = (double) (y % h);
-    if (xposition < 0) xposition += self.scene.size.width;
-    if (yposition < 0) yposition += self.scene.size.height;
+    if (xposition < 0) xposition += self.scene.frame.size.width;
+    if (yposition < 0) yposition += self.scene.frame.size.height;
     self.position = CGPointMake(xposition, yposition);
     double vx = self.vel.dx;
     double vy = self.vel.dy;
     if (self.thrust) {
-        vx += 0.5 * cos(self.zRotation);
-        vy += 0.5 * sin(self.zRotation);
+        vx += 0.1 * cos(self.zRotation);
+        vy += 0.1 * sin(self.zRotation);
     }
     vx *= 0.99;
     vy *= 0.99;

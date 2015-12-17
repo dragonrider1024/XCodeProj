@@ -43,6 +43,7 @@ NSMutableSet* asteroidgroup;
 ImageInfo* explosioninfo;
 UIImage* explosion;
 AVAudioPlayer* explosion_sound;
+NSMutableArray* explosionTexture;
 
 
 int main(int argc, char * argv[]) {
@@ -92,6 +93,16 @@ int main(int argc, char * argv[]) {
     NSString *explosionfilepath = [NSString stringWithFormat:@"%@/explosion.mp3", [[NSBundle mainBundle] resourcePath]];
     NSURL *explosionurl = [NSURL fileURLWithPath:explosionfilepath];
     explosion_sound = [[AVAudioPlayer alloc] initWithContentsOfURL: explosionurl error:nil];
+    explosionTexture = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 24; i ++) {
+        CGRect rect = CGRectMake(explosion.size.width / 24 * i, 0, explosion.size.width / 24, explosion.size.height);
+        CGImageRef recti = CGImageCreateWithImageInRect([explosion CGImage], rect);
+        UIImage* explosionImage_i = [UIImage imageWithCGImage: recti];
+        CGImageRelease(recti);
+        [explosionTexture addObject: [SKTexture textureWithImage: explosionImage_i]];
+    }
+    
+    
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

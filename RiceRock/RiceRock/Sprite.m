@@ -36,12 +36,12 @@ extern Ship* ship;
     yposition += self.vel.dy;
     int x = (int) xposition;
     int y = (int) yposition;
-    int w = (int) ship.scene.size.width;
-    int h = (int) ship.scene.size.height;
+    int w = (int) ship.scene.frame.size.width;
+    int h = (int) ship.scene.frame.size.height;
     xposition = (double) (x % w);
     yposition = (double) (y % h);
-    if (xposition < 0) xposition += ship.scene.size.width;
-    if (yposition < 0) yposition += ship.scene.size.height;
+    if (xposition < 0) xposition += ship.scene.frame.size.width;
+    if (yposition < 0) yposition += ship.scene.frame.size.height;
     self.position = CGPointMake(xposition, yposition);
     self.age += 0.0001;
     if (self.age <= self.lifespan) {

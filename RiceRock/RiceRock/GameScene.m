@@ -36,17 +36,19 @@ extern NSMutableSet* bulletgroup;
 extern NSMutableSet* asteroidgroup;
 extern Ship* ship;
 extern AVAudioPlayer* explosion_sound;
-
+extern NSMutableArray* explosionTexture;
 
 @implementation GameScene {
     Sprite* splashnode;
+    SKLabelNode* livesNode;
+    SKLabelNode* scoreNode;
 }
 
 -(void)didMoveToView:(SKView *)view {
     
     //load and add background nebula
     Sprite* nebulanode = [[Sprite alloc] initWithImage: nebula info: nebulainfo sound: soundtrack];
-    nebulanode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    nebulanode.position = CGPointMake(self.size.width/2, self.size.height/2);
     nebulanode.size = self.size;
     [nebulanode draw: self];
 
@@ -65,7 +67,23 @@ extern AVAudioPlayer* explosion_sound;
     ship.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     [ship draw:self];
 
-
+    //add lives and score
+    livesNode = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    livesNode.text = [@(lives) stringValue];
+    livesNode.position = CGPointMake(50, 600);
+    scoreNode = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    scoreNode.text = [@(score) stringValue];
+    scoreNode.position = CGPointMake(980, 600);
+    [self addChild: livesNode];
+    [self addChild: scoreNode];
+    SKLabelNode* livelabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    livelabel.text = @"lives";
+    livelabel.position = CGPointMake(50, 650);
+    SKLabelNode* scorelabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    scorelabel.text = @"scores";
+    scorelabel.position = CGPointMake(980, 650);
+    [self addChild: livelabel];
+    [self addChild: scorelabel];
 
     
 }
@@ -117,7 +135,8 @@ extern AVAudioPlayer* explosion_sound;
     for(UITouch *atouch in touches) {
         //single tap
         if (atouch.tapCount == 1) {
-            [ship performSelector:@selector(set_thrust:) withObject:false afterDelay:1.0];
+            [ship set_thrust: false];
+//            [ship performSelector:@selector(set_thrust:) withObject:false afterDelay:1.0];
         }
         else {
             continue;
@@ -132,10 +151,13 @@ extern AVAudioPlayer* explosion_sound;
     if(asteroidgroup.count < 12) {
         [self rock_spawner];
     }
+
     if ([self group_collide: asteroidgroup sprite: ship]) {
         lives -= 1;
+        livesNode.text = [@(lives) stringValue];
     }
     score += [self group_group_collide: asteroidgroup missile_group: bulletgroup];
+    scoreNode.text = [@(score) stringValue];
     
     //update the bullet and asteroid position
     [self process_sprite_group:bulletgroup];
@@ -174,7 +196,12 @@ extern AVAudioPlayer* explosion_sound;
     else {
         for(Sprite* s in rm) {
             [group removeObject: s];
-            [s removeFromParent];
+        }
+        for (Sprite* s in rm) {
+            SKAction* explode = [SKAction animateWithTextures: explosionTexture timePerFrame: 0.05f];
+            SKAction* remove = [SKAction removeFromParent];
+            SKAction* seq = [SKAction sequence:@[explode, remove]];
+            [s runAction: seq];
             [explosion_sound prepareToPlay];
             [explosion_sound play];
         }
@@ -211,12 +238,18 @@ extern AVAudioPlayer* explosion_sound;
 -(void) rock_spawner {
     Sprite* asteroidnode;
     asteroidnode = [[Sprite alloc] initWithImage: asteroid info: asteroidinfo sound: nil];
+    double dist;
+    do {
     double x = (double)arc4random() / 0x100000000* self.size.width;
     double y = (double)arc4random() / 0x100000000 * self.size.height;
     asteroidnode.position = CGPointMake(x,y);
-    double vx = (((double)arc4random()/0x100000000)*5) - 2.5;
-    double vy = (((double)arc4random()/0x100000000)*5) - 2.5;
-    double avel =  (((double)arc4random()/0x100000000)*0.4) - 0.2;
+    double dx = asteroidnode.position.x - ship.position.x;
+    double dy = asteroidnode.position.y - ship.position.y;
+    dist = sqrt(dx * dx + dy * dy);
+    } while(dist < 100.0);
+    double vx = (((double)arc4random()/0x100000000)*1) - 0.5;
+    double vy = (((double)arc4random()/0x100000000)*1) - 0.5;
+    double avel =  (((double)arc4random()/0x100000000)*0.2) - 0.1;
     asteroidnode.vel = CGVectorMake(vx, vy);
     asteroidnode.angle_vel = avel;
     [asteroidgroup addObject: asteroidnode];
